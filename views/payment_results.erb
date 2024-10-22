@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Square</title>
+  </head>
+  <body>
+    <h1> Payment Results </h1>
+    <dt> APR </dt> 
+    <dd> <%= @apr.to_fs(:percentage, precision: 4) %> </dd>
+    <dt> Number of years </dt>
+    <dd> <%= @years %> </dd>
+    <dt> Principal </dt>
+    <dd> <%= @principle.to_fs(:currency) %></dd>
+    <dt> Payment </dt>
+    <dd> <%= @monthly_payment.to_fs(:currency) %></dd>
+
+    <p><a href="/payment/new">Calculate another payment</a></p>
+  </body>
+</html>
